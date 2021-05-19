@@ -3,6 +3,6 @@ const userRoutes = require('./userRoutes.js');
 const workoutRoutes = require('./workoutRoutes')
 
 router.use('/', userRoutes);
-router.use('/workouts', workerRoutes);
+router.use('/workouts', workoutRoutes);
 
 module.exports = router;

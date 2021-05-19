@@ -1,5 +1,3 @@
-const { db } = require('../../models/User');
-
 const router = require('express').Router();
 
 // const databaseUrl = "<your-database-name>";
@@ -14,15 +12,18 @@ router.get('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  db.workouts.update({ _id: mongojs.ObjectId(req.params.id) },(req.body), (error, data) => {
-    error ? console.error(error) : res.status(200).json(data);
-  });
+  console.log(req.body);
+  // db.workouts.update({ _id: mongojs.ObjectId(req.params.id) }, req.body, (error, data) => {
+  //   error ? console.error(error) : res.status(200).json(data);
+  // });
 });
 
 router.post('/', ({ body }, res) => {
-  db.workouts.create(body, (error, data) => {
-    error ? console.error(error) : res.status(200).json(data);
-  });
+
+  console.log(body);
+  // db.workouts.insert(body, (error, data) => {
+  //   error ? console.error(error) : res.status(200).json(data);
+  // });
 });
 
 router.get('/range', (req, res) => {
