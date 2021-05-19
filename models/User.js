@@ -7,12 +7,12 @@ const UserSchema = new Schema({
     type: String,
     unique: true
   },
-  // notes: [
-  //   {
-  //     type: Schema.Types.ObjectId,
-  //     ref: "Note"
-  //   }
-  // ]
+  workout: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Workout"
+    }
+  ]
 });
 
 const User = mongoose.model("User", UserSchema);

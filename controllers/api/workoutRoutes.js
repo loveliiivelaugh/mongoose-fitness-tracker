@@ -2,9 +2,10 @@ const router = require('express').Router();
 const Workout = require("../../models/Workout");
 
 router.get('/', (req, res) => {
-  Workout.find({})
-    .then(data => res.status(200).json(data))
-    .catch(error => console.error(error));
+  console.log("GET /api/workouts");
+  // Workout.find({})
+  //   .then(data => res.status(200).json(data))
+  //   .catch(error => console.error(error));
 });
 
 router.put('/:id', (req, res) => {
@@ -15,18 +16,16 @@ router.put('/:id', (req, res) => {
 });
 
 router.post('/', ({ body }, res) => {
-
   console.log(body);
   Workout.create(body)
     .then(data => res.status(200).json(data))
     .catch(error => console.error(error))
-
 });
 
 router.get('/range', (req, res) => {
-  Workout.find({}, (req, res) => {
-    error ? console.error(error) : res.status(200).json(data);
-  });
+  Workout.find({})
+    .then(data => res.status(200).json(data))
+    .catch(error => console.error(error));
 });
 
 module.exports = router;
