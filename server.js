@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, './public')));
 
-mongoose.connect(process.env,MONGODB_URI || "mongodb://localhost/<name-goes-here>", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/<name-goes-here>", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
