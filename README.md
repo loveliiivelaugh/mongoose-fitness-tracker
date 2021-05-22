@@ -14,15 +14,17 @@ A simple tool to track workouts and exercises as well as providing a little bit 
 
 ## Screencasts
 
-![Screencast 1](/assets/images/screencast1.png)
-
-![Screencast 2](/assets/images/screencast2.png)
+![Screencast](/assets/images/screencast.gif)
 
 ## Installation
 
-```
-npm i
-```
+`npm i`
+
+## Deployment
+
+* Deployed with [Heroku](https://www.heroku.com)
+
+* Visit [live](https://mongoose-exercise-tracker.herokuapp.com)
 
 ## License
 
