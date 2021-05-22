@@ -33,7 +33,6 @@ app.get('/exercise', async (req, res) =>
   res.sendFile(path.join(__dirname, './public/exercise.html')));
 
 app.get('/api/workouts', (req, res) => {
-  console.log("GET /api/workouts");
   Workout.find({})
     .then(data => res.status(200).json(data))
     .catch(error => console.error(error));
@@ -55,7 +54,6 @@ app.put('/api/workouts/:id', async ({ body, params }, res) => {
 });
 
 app.post('/api/workouts', ({ body }, res) => {
-  console.log(body);
   Workout.create(body)
     .then(data => res.status(200).json(data))
     .catch(error => console.error(error))
@@ -67,4 +65,4 @@ app.get('/api/workouts/range', (req, res) => {
     .catch(error => console.error(error));
 });
 
-app.listen(PORT, () => console.log('Now listening'));
+app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
