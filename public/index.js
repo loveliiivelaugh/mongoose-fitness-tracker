@@ -1,5 +1,3 @@
-const API = require('/api.js');
-
 init();
 
 async function init() {
@@ -8,7 +6,7 @@ async function init() {
     if (workout) {
       location.search = "?id=" + workout._id;
     } else {
-      document.querySelector("#continue-btn").classList.add("d-none")
+      document.querySelector("#continue-btn").classList.add("d-none");
     }
   }
 }

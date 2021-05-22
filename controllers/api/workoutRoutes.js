@@ -3,9 +3,9 @@ const Workout = require("../../models/Workout");
 
 router.get('/', (req, res) => {
   console.log("GET /api/workouts");
-  // Workout.find({})
-  //   .then(data => res.status(200).json(data))
-  //   .catch(error => console.error(error));
+  Workout.find({})
+    .then(data => res.status(200).json(data))
+    .catch(error => console.error(error));
 });
 
 router.put('/:id', (req, res) => {

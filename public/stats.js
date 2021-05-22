@@ -12,10 +12,13 @@ function calculateTotalWeight(data) {
     totals.push(workoutTotal);
   });
 
+  console.log("Reduced totals: ", totals);
+
   return totals;
 }
 
 function populateChart(data) {
+  console.log("populateChart(): ", data)
   const durations = data.map(({ totalDuration }) => totalDuration);
   const pounds = calculateTotalWeight(data);
 
